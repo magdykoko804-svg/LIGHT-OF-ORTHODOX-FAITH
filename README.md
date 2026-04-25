@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/27088521/README.md)
 # ☩ الحكمة الأرثوذكسية — Orthodox Wisdom
 
 **مستشار لاهوتي بالذكاء الاصطناعي · AI Theological Advisor**
