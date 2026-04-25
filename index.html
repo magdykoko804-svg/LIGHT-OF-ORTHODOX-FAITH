@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="الحكمة الأرثوذكسية — مستشار لاهوتي بالذكاء الاصطناعي متجذر في الكتاب المقدس والتراث الأرثوذكسي" />
+  <title>الحكمة الأرثوذكسية | Orthodox Wisdom</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════ -->
+  <header id="app-header">
+    <div class="header-left">
+      <button id="sidebar-toggle" class="icon-btn" title="Toggle Library">
+        <svg id="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div class="header-cross">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="11" y="2" width="6" height="24" rx="1.5" fill="currentColor"/>
+          <rect x="2"  y="9" width="24" height="6"  rx="1.5" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="header-brand">
+        <div id="header-title" class="brand-title">الحكمة الأرثوذكسية</div>
+        <div id="header-sub"   class="brand-sub">مستشار لاهوتي بالذكاء الاصطناعي · متجذر في الكتاب المقدس والتراث</div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- View toggle (mobile) -->
+      <div class="view-tabs" id="view-tabs">
+        <button class="tab-btn" data-view="chat"    id="tab-chat">محادثة</button>
+        <button class="tab-btn active" data-view="library" id="tab-library">مكتبة</button>
+      </div>
+      <!-- Language toggle -->
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="ar" id="lang-ar">عربي</button>
+        <div class="lang-sep"></div>
+        <button class="lang-btn" data-lang="en" id="lang-en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       BODY
+  ══════════════════════════════════════════ -->
+  <div id="app-body">
+
+    <!-- SIDEBAR / LIBRARY -->
+    <aside id="sidebar">
+      <div class="sidebar-header" id="sidebar-header-label">المكتبة</div>
+      <div id="library-sections"></div>
+    </aside>
+
+    <!-- CHAT PANEL -->
+    <main id="chat-panel">
+
+      <!-- Welcome Screen -->
+      <div id="welcome-screen">
+        <div class="welcome-icon">
+          <svg width="30" height="30" viewBox="0 0 28 28" fill="none">
+            <rect x="11" y="2" width="6" height="24" rx="1.5" fill="currentColor"/>
+            <rect x="2"  y="9" width="24" height="6"  rx="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 id="welcome-heading">اسأل بإيمان، فتنال الحق</h2>
+        <p  id="welcome-verse">"اسألوا تُعطَوا، اطلبوا تجدوا، اقرعوا يُفتح لكم." — متى ٧: ٧</p>
+        <div id="suggestions-grid"></div>
+      </div>
+
+      <!-- Messages -->
+      <div id="messages-list"></div>
+
+      <!-- Input Bar -->
+      <div id="input-bar">
+        <div id="input-wrapper">
+          <button id="send-btn-rtl" class="send-btn">
+            <svg width="17" height="17" viewBox="0 0 20 20" fill="none" style="transform:scaleX(-1)">
+              <path d="M2 10L18 2L10 18L8.5 11.5L2 10Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <textarea id="chat-input" rows="1" placeholder="اطرح أي سؤال عن الإيمان الأرثوذكسي…" dir="rtl"></textarea>
+          <button id="send-btn-ltr" class="send-btn" style="display:none;">
+            <svg width="17" height="17" viewBox="0 0 20 20" fill="none">
+              <path d="M2 10L18 2L10 18L8.5 11.5L2 10Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <p id="footer-note">الكتاب المقدس · الأجبية · الآباء القديسون · المجامع المسكونية · السنكسار</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
